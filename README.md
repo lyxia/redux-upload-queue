@@ -41,7 +41,7 @@ export const UploadURL = '/app/uploadPhoto'append('imgFile', file)
 ```
 uji修改`redux-upload-queue/js/networking/ServiceConfig.js`文件：
 ```
-export const SERVER = "https:/test.hfmoney.com";
+export const SERVER = "http://172.16.11.80";
 export const UploadURL = '/app/uploadPhoto'
 ```
 
