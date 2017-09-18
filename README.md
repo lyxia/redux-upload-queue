@@ -42,6 +42,7 @@ formData.append('type', 1)
 export const SERVER = "http://172.16.11.80";
 export const UploadURL = '/app/uploadPhoto'
 ```
+7、react-native run-ios/run-android
 
 ### 运行效果图
 ![](https://github.com/lyxia/redux-upload-queue/blob/master/images/page1.png)
