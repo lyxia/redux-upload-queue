@@ -47,7 +47,17 @@ export const UploadURL = '/app/uploadPhoto'
 ![](https://github.com/lyxia/redux-upload-queue/blob/master/images/page1.png)
 
 ### 使用方法
-导入头文件：
+在reducer中注册：
+```
+import {combineReducers} from 'redux'
+
+import {UploadReducer} from '../component/upload'
+
+export default combineReducers({
+    upload: UploadReducer,
+});
+```
+在需要使用的文件中导入头文件：
 ```
 import {
     redux_upload, //HOC
