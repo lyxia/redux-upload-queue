@@ -37,7 +37,7 @@ uploadItem = uploadItem.set('state', UPLOAD_STATE.UPLOADED).set('id', id)
 formData.append('imgFile', file)
 formData.append('type', 1)
 ```
-uji修改`redux-upload-queue/js/networking/ServiceConfig.js`文件：
+修改`redux-upload-queue/js/networking/ServiceConfig.js`文件：
 ```
 export const SERVER = "http://172.16.11.80";
 export const UploadURL = '/app/uploadPhoto'
@@ -185,3 +185,20 @@ UploadLoading = connect(
     null,
 )(UploadLoading)
 ```
+
+### 使用到的第三方库
+用来选取图片或拍照：
+"react-native-image-picker"
+https://github.com/react-community/react-native-image-picker
+用来快速集成表单：
+"redux-form"
+https://github.com/erikras/redux-form
+用来快速写action：
+"redux-actions"
+https://redux-actions.js.org/
+用来在reducer中实现数据不可变性：
+"immutable"
+http://facebook.github.io/immutable-js/docs/
+redux的异步请求中间件：
+"redux-thunk"
+https://github.com/gaearon/redux-thunk
