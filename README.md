@@ -44,6 +44,7 @@ export const UploadURL = '/app/uploadPhoto'
 ```
 
 ### 运行效果图
+![](https://github.com/lyxia/redux-upload-queue/blob/master/images/page1.png)
 
 ### 使用方法
 导入头文件：
