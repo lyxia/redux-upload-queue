@@ -34,10 +34,8 @@ uploadItem = uploadItem.set('state', UPLOAD_STATE.UPLOADED).set('id', id)
 修改`redux-upload-queue/js/networking/FetchData.js`的第16行：
 ```
  //视服务器要求的字段而定
-    formData.export const SERVER = "https:/test.hfmoney.com";
-
-export const UploadURL = '/app/uploadPhoto'append('imgFile', file)
-    formData.append('type', 1)
+formData.append('imgFile', file)
+formData.append('type', 1)
 ```
 uji修改`redux-upload-queue/js/networking/ServiceConfig.js`文件：
 ```
