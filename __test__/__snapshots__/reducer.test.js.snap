@@ -1,0 +1,1100 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[` 1`] = `
+Immutable.Map {
+  "uploadTestKey": Immutable.Upload {
+    "wattingQueue": Immutable.List [],
+    "uploadedQueue": Immutable.List [],
+    "failedQueue": Immutable.List [],
+    "uploading": false,
+    "cancle": false,
+    "name": "uploadTestKey",
+  },
+}
+`;
+
+exports[`upload component reducer test mult file upload handle delete files 1`] = `
+Immutable.Map {
+  "uploadTestMulKey": Immutable.Upload {
+    "wattingQueue": Immutable.List [
+      Immutable.UploadItem {
+        "filepath": "fileOnePath",
+        "state": "none",
+        "id": null,
+        "name": "fileOne",
+      },
+      Immutable.UploadItem {
+        "filepath": "fileTwoPath",
+        "state": "none",
+        "id": null,
+        "name": "fileTwo",
+      },
+      Immutable.UploadItem {
+        "filepath": "fileThreePath",
+        "state": "none",
+        "id": null,
+        "name": "fileThree",
+      },
+    ],
+    "uploadedQueue": Immutable.List [],
+    "failedQueue": Immutable.List [],
+    "uploading": false,
+    "cancle": false,
+    "name": "uploadTestMulKey",
+  },
+}
+`;
+
+exports[`upload component reducer test mult file upload handle delete files 2`] = `
+Immutable.Map {
+  "uploadTestMulKey": Immutable.Upload {
+    "wattingQueue": Immutable.List [
+      Immutable.UploadItem {
+        "filepath": "fileTwoPath",
+        "state": "none",
+        "id": null,
+        "name": "fileTwo",
+      },
+      Immutable.UploadItem {
+        "filepath": "fileThreePath",
+        "state": "none",
+        "id": null,
+        "name": "fileThree",
+      },
+    ],
+    "uploadedQueue": Immutable.List [],
+    "failedQueue": Immutable.List [],
+    "uploading": false,
+    "cancle": false,
+    "name": "uploadTestMulKey",
+  },
+}
+`;
+
+exports[`upload component reducer test mult file upload handle push mult files 1`] = `
+Immutable.Map {
+  "uploadTestMulKey": Immutable.Upload {
+    "wattingQueue": Immutable.List [
+      Immutable.UploadItem {
+        "filepath": "fileOnePath",
+        "state": "none",
+        "id": null,
+        "name": "fileOne",
+      },
+      Immutable.UploadItem {
+        "filepath": "fileTwoPath",
+        "state": "none",
+        "id": null,
+        "name": "fileTwo",
+      },
+      Immutable.UploadItem {
+        "filepath": "fileThreePath",
+        "state": "none",
+        "id": null,
+        "name": "fileThree",
+      },
+    ],
+    "uploadedQueue": Immutable.List [],
+    "failedQueue": Immutable.List [],
+    "uploading": false,
+    "cancle": false,
+    "name": "uploadTestMulKey",
+  },
+}
+`;
+
+exports[`upload component reducer test mult file upload handle upload failed 1`] = `
+Immutable.Map {
+  "uploadTestMulKey": Immutable.Upload {
+    "wattingQueue": Immutable.List [
+      Immutable.UploadItem {
+        "filepath": "fileOnePath",
+        "state": "none",
+        "id": null,
+        "name": "fileOne",
+      },
+      Immutable.UploadItem {
+        "filepath": "fileTwoPath",
+        "state": "none",
+        "id": null,
+        "name": "fileTwo",
+      },
+      Immutable.UploadItem {
+        "filepath": "fileThreePath",
+        "state": "none",
+        "id": null,
+        "name": "fileThree",
+      },
+    ],
+    "uploadedQueue": Immutable.List [],
+    "failedQueue": Immutable.List [],
+    "uploading": false,
+    "cancle": false,
+    "name": "uploadTestMulKey",
+  },
+}
+`;
+
+exports[`upload component reducer test mult file upload handle upload failed 2`] = `
+Immutable.Map {
+  "uploadTestMulKey": Immutable.Upload {
+    "wattingQueue": Immutable.List [
+      Immutable.UploadItem {
+        "filepath": "fileOnePath",
+        "state": "watting",
+        "id": null,
+        "name": "fileOne",
+      },
+      Immutable.UploadItem {
+        "filepath": "fileTwoPath",
+        "state": "watting",
+        "id": null,
+        "name": "fileTwo",
+      },
+      Immutable.UploadItem {
+        "filepath": "fileThreePath",
+        "state": "watting",
+        "id": null,
+        "name": "fileThree",
+      },
+    ],
+    "uploadedQueue": Immutable.List [],
+    "failedQueue": Immutable.List [],
+    "uploading": true,
+    "cancle": false,
+    "name": "uploadTestMulKey",
+  },
+}
+`;
+
+exports[`upload component reducer test mult file upload handle upload failed 3`] = `
+Immutable.Map {
+  "uploadTestMulKey": Immutable.Upload {
+    "wattingQueue": Immutable.List [
+      Immutable.UploadItem {
+        "filepath": "fileOnePath",
+        "state": "uploading",
+        "id": null,
+        "name": "fileOne",
+      },
+      Immutable.UploadItem {
+        "filepath": "fileTwoPath",
+        "state": "watting",
+        "id": null,
+        "name": "fileTwo",
+      },
+      Immutable.UploadItem {
+        "filepath": "fileThreePath",
+        "state": "watting",
+        "id": null,
+        "name": "fileThree",
+      },
+    ],
+    "uploadedQueue": Immutable.List [],
+    "failedQueue": Immutable.List [],
+    "uploading": true,
+    "cancle": false,
+    "name": "uploadTestMulKey",
+  },
+}
+`;
+
+exports[`upload component reducer test mult file upload handle upload failed 4`] = `
+Immutable.Map {
+  "uploadTestMulKey": Immutable.Upload {
+    "wattingQueue": Immutable.List [
+      Immutable.UploadItem {
+        "filepath": "fileTwoPath",
+        "state": "watting",
+        "id": null,
+        "name": "fileTwo",
+      },
+      Immutable.UploadItem {
+        "filepath": "fileThreePath",
+        "state": "watting",
+        "id": null,
+        "name": "fileThree",
+      },
+    ],
+    "uploadedQueue": Immutable.List [],
+    "failedQueue": Immutable.List [
+      Immutable.UploadItem {
+        "filepath": "fileOnePath",
+        "state": "failed",
+        "id": null,
+        "name": "fileOne",
+      },
+    ],
+    "uploading": true,
+    "cancle": false,
+    "name": "uploadTestMulKey",
+  },
+}
+`;
+
+exports[`upload component reducer test mult file upload handle upload failed 5`] = `
+Immutable.Map {
+  "uploadTestMulKey": Immutable.Upload {
+    "wattingQueue": Immutable.List [
+      Immutable.UploadItem {
+        "filepath": "fileTwoPath",
+        "state": "uploading",
+        "id": null,
+        "name": "fileTwo",
+      },
+      Immutable.UploadItem {
+        "filepath": "fileThreePath",
+        "state": "watting",
+        "id": null,
+        "name": "fileThree",
+      },
+    ],
+    "uploadedQueue": Immutable.List [],
+    "failedQueue": Immutable.List [
+      Immutable.UploadItem {
+        "filepath": "fileOnePath",
+        "state": "failed",
+        "id": null,
+        "name": "fileOne",
+      },
+    ],
+    "uploading": true,
+    "cancle": false,
+    "name": "uploadTestMulKey",
+  },
+}
+`;
+
+exports[`upload component reducer test mult file upload handle upload failed 6`] = `
+Immutable.Map {
+  "uploadTestMulKey": Immutable.Upload {
+    "wattingQueue": Immutable.List [
+      Immutable.UploadItem {
+        "filepath": "fileThreePath",
+        "state": "watting",
+        "id": null,
+        "name": "fileThree",
+      },
+    ],
+    "uploadedQueue": Immutable.List [
+      Immutable.UploadItem {
+        "filepath": "fileTwoPath",
+        "state": "uploaded",
+        "id": "123456",
+        "name": "fileTwo",
+      },
+    ],
+    "failedQueue": Immutable.List [
+      Immutable.UploadItem {
+        "filepath": "fileOnePath",
+        "state": "failed",
+        "id": null,
+        "name": "fileOne",
+      },
+    ],
+    "uploading": true,
+    "cancle": false,
+    "name": "uploadTestMulKey",
+  },
+}
+`;
+
+exports[`upload component reducer test mult file upload handle upload failed 7`] = `
+Immutable.Map {
+  "uploadTestMulKey": Immutable.Upload {
+    "wattingQueue": Immutable.List [
+      Immutable.UploadItem {
+        "filepath": "fileThreePath",
+        "state": "uploading",
+        "id": null,
+        "name": "fileThree",
+      },
+    ],
+    "uploadedQueue": Immutable.List [
+      Immutable.UploadItem {
+        "filepath": "fileTwoPath",
+        "state": "uploaded",
+        "id": "123456",
+        "name": "fileTwo",
+      },
+    ],
+    "failedQueue": Immutable.List [
+      Immutable.UploadItem {
+        "filepath": "fileOnePath",
+        "state": "failed",
+        "id": null,
+        "name": "fileOne",
+      },
+    ],
+    "uploading": true,
+    "cancle": false,
+    "name": "uploadTestMulKey",
+  },
+}
+`;
+
+exports[`upload component reducer test mult file upload handle upload failed 8`] = `
+Immutable.Map {
+  "uploadTestMulKey": Immutable.Upload {
+    "wattingQueue": Immutable.List [],
+    "uploadedQueue": Immutable.List [
+      Immutable.UploadItem {
+        "filepath": "fileTwoPath",
+        "state": "uploaded",
+        "id": "123456",
+        "name": "fileTwo",
+      },
+    ],
+    "failedQueue": Immutable.List [
+      Immutable.UploadItem {
+        "filepath": "fileOnePath",
+        "state": "failed",
+        "id": null,
+        "name": "fileOne",
+      },
+      Immutable.UploadItem {
+        "filepath": "fileThreePath",
+        "state": "failed",
+        "id": null,
+        "name": "fileThree",
+      },
+    ],
+    "uploading": true,
+    "cancle": false,
+    "name": "uploadTestMulKey",
+  },
+}
+`;
+
+exports[`upload component reducer test mult file upload handle upload failed 9`] = `
+Immutable.Map {
+  "uploadTestMulKey": Immutable.Upload {
+    "wattingQueue": Immutable.List [],
+    "uploadedQueue": Immutable.List [
+      Immutable.UploadItem {
+        "filepath": "fileTwoPath",
+        "state": "uploaded",
+        "id": "123456",
+        "name": "fileTwo",
+      },
+    ],
+    "failedQueue": Immutable.List [
+      Immutable.UploadItem {
+        "filepath": "fileOnePath",
+        "state": "failed",
+        "id": null,
+        "name": "fileOne",
+      },
+      Immutable.UploadItem {
+        "filepath": "fileThreePath",
+        "state": "failed",
+        "id": null,
+        "name": "fileThree",
+      },
+    ],
+    "uploading": false,
+    "cancle": false,
+    "name": "uploadTestMulKey",
+  },
+}
+`;
+
+exports[`upload component reducer test mult file upload handle upload successed 1`] = `
+Immutable.Map {
+  "uploadTestMulKey": Immutable.Upload {
+    "wattingQueue": Immutable.List [
+      Immutable.UploadItem {
+        "filepath": "fileOnePath",
+        "state": "none",
+        "id": null,
+        "name": "fileOne",
+      },
+      Immutable.UploadItem {
+        "filepath": "fileTwoPath",
+        "state": "none",
+        "id": null,
+        "name": "fileTwo",
+      },
+      Immutable.UploadItem {
+        "filepath": "fileThreePath",
+        "state": "none",
+        "id": null,
+        "name": "fileThree",
+      },
+    ],
+    "uploadedQueue": Immutable.List [],
+    "failedQueue": Immutable.List [],
+    "uploading": false,
+    "cancle": false,
+    "name": "uploadTestMulKey",
+  },
+}
+`;
+
+exports[`upload component reducer test mult file upload handle upload successed 2`] = `
+Immutable.Map {
+  "uploadTestMulKey": Immutable.Upload {
+    "wattingQueue": Immutable.List [
+      Immutable.UploadItem {
+        "filepath": "fileOnePath",
+        "state": "watting",
+        "id": null,
+        "name": "fileOne",
+      },
+      Immutable.UploadItem {
+        "filepath": "fileTwoPath",
+        "state": "watting",
+        "id": null,
+        "name": "fileTwo",
+      },
+      Immutable.UploadItem {
+        "filepath": "fileThreePath",
+        "state": "watting",
+        "id": null,
+        "name": "fileThree",
+      },
+    ],
+    "uploadedQueue": Immutable.List [],
+    "failedQueue": Immutable.List [],
+    "uploading": true,
+    "cancle": false,
+    "name": "uploadTestMulKey",
+  },
+}
+`;
+
+exports[`upload component reducer test mult file upload handle upload successed 3`] = `
+Immutable.Map {
+  "uploadTestMulKey": Immutable.Upload {
+    "wattingQueue": Immutable.List [
+      Immutable.UploadItem {
+        "filepath": "fileOnePath",
+        "state": "uploading",
+        "id": null,
+        "name": "fileOne",
+      },
+      Immutable.UploadItem {
+        "filepath": "fileTwoPath",
+        "state": "watting",
+        "id": null,
+        "name": "fileTwo",
+      },
+      Immutable.UploadItem {
+        "filepath": "fileThreePath",
+        "state": "watting",
+        "id": null,
+        "name": "fileThree",
+      },
+    ],
+    "uploadedQueue": Immutable.List [],
+    "failedQueue": Immutable.List [],
+    "uploading": true,
+    "cancle": false,
+    "name": "uploadTestMulKey",
+  },
+}
+`;
+
+exports[`upload component reducer test mult file upload handle upload successed 4`] = `
+Immutable.Map {
+  "uploadTestMulKey": Immutable.Upload {
+    "wattingQueue": Immutable.List [
+      Immutable.UploadItem {
+        "filepath": "fileTwoPath",
+        "state": "watting",
+        "id": null,
+        "name": "fileTwo",
+      },
+      Immutable.UploadItem {
+        "filepath": "fileThreePath",
+        "state": "watting",
+        "id": null,
+        "name": "fileThree",
+      },
+    ],
+    "uploadedQueue": Immutable.List [
+      Immutable.UploadItem {
+        "filepath": "fileOnePath",
+        "state": "uploaded",
+        "id": "12345",
+        "name": "fileOne",
+      },
+    ],
+    "failedQueue": Immutable.List [],
+    "uploading": true,
+    "cancle": false,
+    "name": "uploadTestMulKey",
+  },
+}
+`;
+
+exports[`upload component reducer test mult file upload handle upload successed 5`] = `
+Immutable.Map {
+  "uploadTestMulKey": Immutable.Upload {
+    "wattingQueue": Immutable.List [
+      Immutable.UploadItem {
+        "filepath": "fileTwoPath",
+        "state": "uploading",
+        "id": null,
+        "name": "fileTwo",
+      },
+      Immutable.UploadItem {
+        "filepath": "fileThreePath",
+        "state": "watting",
+        "id": null,
+        "name": "fileThree",
+      },
+    ],
+    "uploadedQueue": Immutable.List [
+      Immutable.UploadItem {
+        "filepath": "fileOnePath",
+        "state": "uploaded",
+        "id": "12345",
+        "name": "fileOne",
+      },
+    ],
+    "failedQueue": Immutable.List [],
+    "uploading": true,
+    "cancle": false,
+    "name": "uploadTestMulKey",
+  },
+}
+`;
+
+exports[`upload component reducer test mult file upload handle upload successed 6`] = `
+Immutable.Map {
+  "uploadTestMulKey": Immutable.Upload {
+    "wattingQueue": Immutable.List [
+      Immutable.UploadItem {
+        "filepath": "fileThreePath",
+        "state": "watting",
+        "id": null,
+        "name": "fileThree",
+      },
+    ],
+    "uploadedQueue": Immutable.List [
+      Immutable.UploadItem {
+        "filepath": "fileOnePath",
+        "state": "uploaded",
+        "id": "12345",
+        "name": "fileOne",
+      },
+      Immutable.UploadItem {
+        "filepath": "fileTwoPath",
+        "state": "uploaded",
+        "id": "123456",
+        "name": "fileTwo",
+      },
+    ],
+    "failedQueue": Immutable.List [],
+    "uploading": true,
+    "cancle": false,
+    "name": "uploadTestMulKey",
+  },
+}
+`;
+
+exports[`upload component reducer test mult file upload handle upload successed 7`] = `
+Immutable.Map {
+  "uploadTestMulKey": Immutable.Upload {
+    "wattingQueue": Immutable.List [
+      Immutable.UploadItem {
+        "filepath": "fileThreePath",
+        "state": "uploading",
+        "id": null,
+        "name": "fileThree",
+      },
+    ],
+    "uploadedQueue": Immutable.List [
+      Immutable.UploadItem {
+        "filepath": "fileOnePath",
+        "state": "uploaded",
+        "id": "12345",
+        "name": "fileOne",
+      },
+      Immutable.UploadItem {
+        "filepath": "fileTwoPath",
+        "state": "uploaded",
+        "id": "123456",
+        "name": "fileTwo",
+      },
+    ],
+    "failedQueue": Immutable.List [],
+    "uploading": true,
+    "cancle": false,
+    "name": "uploadTestMulKey",
+  },
+}
+`;
+
+exports[`upload component reducer test mult file upload handle upload successed 8`] = `
+Immutable.Map {
+  "uploadTestMulKey": Immutable.Upload {
+    "wattingQueue": Immutable.List [],
+    "uploadedQueue": Immutable.List [
+      Immutable.UploadItem {
+        "filepath": "fileOnePath",
+        "state": "uploaded",
+        "id": "12345",
+        "name": "fileOne",
+      },
+      Immutable.UploadItem {
+        "filepath": "fileTwoPath",
+        "state": "uploaded",
+        "id": "123456",
+        "name": "fileTwo",
+      },
+      Immutable.UploadItem {
+        "filepath": "fileThreePath",
+        "state": "uploaded",
+        "id": "1234567",
+        "name": "fileThree",
+      },
+    ],
+    "failedQueue": Immutable.List [],
+    "uploading": true,
+    "cancle": false,
+    "name": "uploadTestMulKey",
+  },
+}
+`;
+
+exports[`upload component reducer test mult file upload handle upload successed 9`] = `
+Immutable.Map {
+  "uploadTestMulKey": Immutable.Upload {
+    "wattingQueue": Immutable.List [],
+    "uploadedQueue": Immutable.List [
+      Immutable.UploadItem {
+        "filepath": "fileOnePath",
+        "state": "uploaded",
+        "id": "12345",
+        "name": "fileOne",
+      },
+      Immutable.UploadItem {
+        "filepath": "fileTwoPath",
+        "state": "uploaded",
+        "id": "123456",
+        "name": "fileTwo",
+      },
+      Immutable.UploadItem {
+        "filepath": "fileThreePath",
+        "state": "uploaded",
+        "id": "1234567",
+        "name": "fileThree",
+      },
+    ],
+    "failedQueue": Immutable.List [],
+    "uploading": false,
+    "cancle": false,
+    "name": "uploadTestMulKey",
+  },
+}
+`;
+
+exports[`upload component reducer test mult file upload hanlde reupload successed 1`] = `
+Immutable.Map {
+  "uploadTestMulKey": Immutable.Upload {
+    "wattingQueue": Immutable.List [],
+    "uploadedQueue": Immutable.List [
+      Immutable.UploadItem {
+        "filepath": "fileTwoPath",
+        "state": "uploaded",
+        "id": "123456",
+        "name": "fileTwo",
+      },
+    ],
+    "failedQueue": Immutable.List [
+      Immutable.UploadItem {
+        "filepath": "fileOnePath",
+        "state": "failed",
+        "id": null,
+        "name": "fileOne",
+      },
+      Immutable.UploadItem {
+        "filepath": "fileThreePath",
+        "state": "failed",
+        "id": null,
+        "name": "fileThree",
+      },
+    ],
+    "uploading": false,
+    "cancle": false,
+    "name": "uploadTestMulKey",
+  },
+}
+`;
+
+exports[`upload component reducer test mult file upload hanlde reupload successed 2`] = `
+Immutable.Map {
+  "uploadTestMulKey": Immutable.Upload {
+    "wattingQueue": Immutable.List [
+      Immutable.UploadItem {
+        "filepath": "fileOnePath",
+        "state": "watting",
+        "id": null,
+        "name": "fileOne",
+      },
+      Immutable.UploadItem {
+        "filepath": "fileThreePath",
+        "state": "watting",
+        "id": null,
+        "name": "fileThree",
+      },
+    ],
+    "uploadedQueue": Immutable.List [
+      Immutable.UploadItem {
+        "filepath": "fileTwoPath",
+        "state": "uploaded",
+        "id": "123456",
+        "name": "fileTwo",
+      },
+    ],
+    "failedQueue": Immutable.List [],
+    "uploading": true,
+    "cancle": false,
+    "name": "uploadTestMulKey",
+  },
+}
+`;
+
+exports[`upload component reducer test mult file upload hanlde reupload successed 3`] = `
+Immutable.Map {
+  "uploadTestMulKey": Immutable.Upload {
+    "wattingQueue": Immutable.List [],
+    "uploadedQueue": Immutable.List [
+      Immutable.UploadItem {
+        "filepath": "fileTwoPath",
+        "state": "uploaded",
+        "id": "123456",
+        "name": "fileTwo",
+      },
+      Immutable.UploadItem {
+        "filepath": "fileOnePath",
+        "state": "uploaded",
+        "id": "1234567",
+        "name": "fileOne",
+      },
+      Immutable.UploadItem {
+        "filepath": "fileThreePath",
+        "state": "uploaded",
+        "id": "1234568",
+        "name": "fileThree",
+      },
+    ],
+    "failedQueue": Immutable.List [],
+    "uploading": false,
+    "cancle": false,
+    "name": "uploadTestMulKey",
+  },
+}
+`;
+
+exports[`upload component reducer test mult file upload hanlde reupload successed 4`] = `Immutable.Map {}`;
+
+exports[`upload component reducer test one file upload handle deleteItem 1`] = `
+Immutable.Map {
+  "uploadTestKey": Immutable.Upload {
+    "wattingQueue": Immutable.List [
+      Immutable.UploadItem {
+        "filepath": "fileOnePath",
+        "state": "none",
+        "id": null,
+        "name": "fileOne",
+      },
+    ],
+    "uploadedQueue": Immutable.List [],
+    "failedQueue": Immutable.List [],
+    "uploading": false,
+    "cancle": false,
+    "name": "uploadTestKey",
+  },
+}
+`;
+
+exports[`upload component reducer test one file upload handle deleteItem 2`] = `
+Immutable.Map {
+  "uploadTestKey": Immutable.Upload {
+    "wattingQueue": Immutable.List [],
+    "uploadedQueue": Immutable.List [],
+    "failedQueue": Immutable.List [],
+    "uploading": false,
+    "cancle": false,
+    "name": "uploadTestKey",
+  },
+}
+`;
+
+exports[`upload component reducer test one file upload handle upload success 1`] = `
+Immutable.Map {
+  "uploadTestKey": Immutable.Upload {
+    "wattingQueue": Immutable.List [
+      Immutable.UploadItem {
+        "filepath": "fileOnePath",
+        "state": "none",
+        "id": null,
+        "name": "fileOne",
+      },
+    ],
+    "uploadedQueue": Immutable.List [],
+    "failedQueue": Immutable.List [],
+    "uploading": false,
+    "cancle": false,
+    "name": "uploadTestKey",
+  },
+}
+`;
+
+exports[`upload component reducer test one file upload handle upload success 2`] = `
+Immutable.Map {
+  "uploadTestKey": Immutable.Upload {
+    "wattingQueue": Immutable.List [
+      Immutable.UploadItem {
+        "filepath": "fileOnePath",
+        "state": "watting",
+        "id": null,
+        "name": "fileOne",
+      },
+    ],
+    "uploadedQueue": Immutable.List [],
+    "failedQueue": Immutable.List [],
+    "uploading": true,
+    "cancle": false,
+    "name": "uploadTestKey",
+  },
+}
+`;
+
+exports[`upload component reducer test one file upload handle upload success 3`] = `
+Immutable.Map {
+  "uploadTestKey": Immutable.Upload {
+    "wattingQueue": Immutable.List [
+      Immutable.UploadItem {
+        "filepath": "fileOnePath",
+        "state": "uploading",
+        "id": null,
+        "name": "fileOne",
+      },
+    ],
+    "uploadedQueue": Immutable.List [],
+    "failedQueue": Immutable.List [],
+    "uploading": true,
+    "cancle": false,
+    "name": "uploadTestKey",
+  },
+}
+`;
+
+exports[`upload component reducer test one file upload handle upload success 4`] = `
+Immutable.Map {
+  "uploadTestKey": Immutable.Upload {
+    "wattingQueue": Immutable.List [],
+    "uploadedQueue": Immutable.List [
+      Immutable.UploadItem {
+        "filepath": "fileOnePath",
+        "state": "uploaded",
+        "id": "12345",
+        "name": "fileOne",
+      },
+    ],
+    "failedQueue": Immutable.List [],
+    "uploading": true,
+    "cancle": false,
+    "name": "uploadTestKey",
+  },
+}
+`;
+
+exports[`upload component reducer test one file upload handle upload success 5`] = `
+Immutable.Map {
+  "uploadTestKey": Immutable.Upload {
+    "wattingQueue": Immutable.List [],
+    "uploadedQueue": Immutable.List [
+      Immutable.UploadItem {
+        "filepath": "fileOnePath",
+        "state": "uploaded",
+        "id": "12345",
+        "name": "fileOne",
+      },
+    ],
+    "failedQueue": Immutable.List [],
+    "uploading": false,
+    "cancle": false,
+    "name": "uploadTestKey",
+  },
+}
+`;
+
+exports[`upload component reducer test one file upload handler pushItem 1`] = `
+Immutable.Map {
+  "uploadTestKey": Immutable.Upload {
+    "wattingQueue": Immutable.List [
+      Immutable.UploadItem {
+        "filepath": "fileOnePath",
+        "state": "none",
+        "id": null,
+        "name": "fileOne",
+      },
+    ],
+    "uploadedQueue": Immutable.List [],
+    "failedQueue": Immutable.List [],
+    "uploading": false,
+    "cancle": false,
+    "name": "uploadTestKey",
+  },
+}
+`;
+
+exports[`upload component reducer test one file upload handler reupload success 1`] = `
+Immutable.Map {
+  "uploadTestKey": Immutable.Upload {
+    "wattingQueue": Immutable.List [],
+    "uploadedQueue": Immutable.List [],
+    "failedQueue": Immutable.List [
+      Immutable.UploadItem {
+        "filepath": "fileOnePath",
+        "state": "failed",
+        "id": null,
+        "name": "fileOne",
+      },
+    ],
+    "uploading": false,
+    "cancle": false,
+    "name": "uploadTestKey",
+  },
+}
+`;
+
+exports[`upload component reducer test one file upload handler reupload success 2`] = `
+Immutable.Map {
+  "uploadTestKey": Immutable.Upload {
+    "wattingQueue": Immutable.List [
+      Immutable.UploadItem {
+        "filepath": "fileOnePath",
+        "state": "watting",
+        "id": null,
+        "name": "fileOne",
+      },
+    ],
+    "uploadedQueue": Immutable.List [],
+    "failedQueue": Immutable.List [],
+    "uploading": true,
+    "cancle": false,
+    "name": "uploadTestKey",
+  },
+}
+`;
+
+exports[`upload component reducer test one file upload handler reupload success 3`] = `
+Immutable.Map {
+  "uploadTestKey": Immutable.Upload {
+    "wattingQueue": Immutable.List [],
+    "uploadedQueue": Immutable.List [
+      Immutable.UploadItem {
+        "filepath": "fileOnePath",
+        "state": "uploaded",
+        "id": "12345",
+        "name": "fileOne",
+      },
+    ],
+    "failedQueue": Immutable.List [],
+    "uploading": false,
+    "cancle": false,
+    "name": "uploadTestKey",
+  },
+}
+`;
+
+exports[`upload component reducer test one file upload handler reupload success 4`] = `Immutable.Map {}`;
+
+exports[`upload component reducer test one file upload handler reupload success 5`] = `
+Immutable.Map {
+  "uploadTestMulKey": Immutable.Upload {
+    "wattingQueue": Immutable.List [],
+    "uploadedQueue": Immutable.List [],
+    "failedQueue": Immutable.List [],
+    "uploading": false,
+    "cancle": false,
+    "name": "uploadTestMulKey",
+  },
+}
+`;
+
+exports[`upload component reducer test one file upload handler upload failed 1`] = `
+Immutable.Map {
+  "uploadTestKey": Immutable.Upload {
+    "wattingQueue": Immutable.List [
+      Immutable.UploadItem {
+        "filepath": "fileOnePath",
+        "state": "watting",
+        "id": null,
+        "name": "fileOne",
+      },
+    ],
+    "uploadedQueue": Immutable.List [],
+    "failedQueue": Immutable.List [],
+    "uploading": true,
+    "cancle": false,
+    "name": "uploadTestKey",
+  },
+}
+`;
+
+exports[`upload component reducer test one file upload handler upload failed 2`] = `
+Immutable.Map {
+  "uploadTestKey": Immutable.Upload {
+    "wattingQueue": Immutable.List [
+      Immutable.UploadItem {
+        "filepath": "fileOnePath",
+        "state": "uploading",
+        "id": null,
+        "name": "fileOne",
+      },
+    ],
+    "uploadedQueue": Immutable.List [],
+    "failedQueue": Immutable.List [],
+    "uploading": true,
+    "cancle": false,
+    "name": "uploadTestKey",
+  },
+}
+`;
+
+exports[`upload component reducer test one file upload handler upload failed 3`] = `
+Immutable.Map {
+  "uploadTestKey": Immutable.Upload {
+    "wattingQueue": Immutable.List [],
+    "uploadedQueue": Immutable.List [],
+    "failedQueue": Immutable.List [
+      Immutable.UploadItem {
+        "filepath": "fileOnePath",
+        "state": "failed",
+        "id": null,
+        "name": "fileOne",
+      },
+    ],
+    "uploading": true,
+    "cancle": false,
+    "name": "uploadTestKey",
+  },
+}
+`;
+
+exports[`upload component reducer test one file upload handler upload failed 4`] = `
+Immutable.Map {
+  "uploadTestKey": Immutable.Upload {
+    "wattingQueue": Immutable.List [],
+    "uploadedQueue": Immutable.List [],
+    "failedQueue": Immutable.List [
+      Immutable.UploadItem {
+        "filepath": "fileOnePath",
+        "state": "failed",
+        "id": null,
+        "name": "fileOne",
+      },
+    ],
+    "uploading": false,
+    "cancle": false,
+    "name": "uploadTestKey",
+  },
+}
+`;

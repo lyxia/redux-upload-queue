@@ -1,0 +1,89 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`uploadComponent new 1`] = `
+Array [
+  Object {
+    "payload": Object {
+      "upload": "uploadKey",
+    },
+    "type": "Upload/registerUpload",
+  },
+  Object {
+    "payload": Object {
+      "filePath": "fileOnePath",
+      "name": "fileOne",
+      "upload": "uploadKey",
+    },
+    "type": "Upload/pushItem",
+  },
+  Object {
+    "payload": Object {
+      "upload": "uploadKey",
+    },
+    "type": "Upload/startUpload",
+  },
+  Object {
+    "payload": Object {
+      "upload": "uploadKey",
+    },
+    "type": "Upload/startUploadItem",
+  },
+  Object {
+    "payload": Object {
+      "id": "123456",
+      "upload": "uploadKey",
+    },
+    "type": "Upload/successUploadItem",
+  },
+  Object {
+    "payload": Object {
+      "upload": "uploadKey",
+    },
+    "type": "Upload/uploadComplete",
+  },
+]
+`;
+
+exports[`uploadComponent old 1`] = `
+Array [
+  Object {
+    "payload": Object {
+      "upload": "uploadKey",
+    },
+    "type": "Upload/registerUpload",
+  },
+  Object {
+    "payload": Object {
+      "filePath": "fileOnePath",
+      "name": "fileOne",
+      "upload": "uploadKey",
+    },
+    "type": "Upload/pushItem",
+  },
+  Object {
+    "payload": Object {
+      "upload": "uploadKey",
+    },
+    "type": "Upload/startUpload",
+  },
+  Object {
+    "payload": Object {
+      "upload": "uploadKey",
+    },
+    "type": "Upload/startUploadItem",
+  },
+  Object {
+    "payload": Object {
+      "id": "123456",
+      "upload": "uploadKey",
+    },
+    "type": "Upload/successUploadItem",
+  },
+  Object {
+    "payload": Object {
+      "upload": "uploadKey",
+    },
+    "type": "Upload/uploadComplete",
+  },
+]
+`;

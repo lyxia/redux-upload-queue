@@ -1,29 +1,48 @@
 {
-	"name": "ReduxUploadDemo",
-	"version": "0.0.1",
-	"private": true,
-	"scripts": {
-		"start": "node node_modules/react-native/local-cli/cli.js start",
-		"test": "jest"
-	},
-	"dependencies": {
-		"immutable": "^3.8.1",
-		"react": "16.0.0-alpha.12",
-		"react-native": "0.48.3",
-		"react-native-image-picker": "^0.26.7",
-		"react-redux": "^5.0.6",
-		"redux": "^3.7.2",
-		"redux-actions": "^2.2.1",
-		"redux-form": "^7.0.4",
-		"redux-thunk": "^2.2.0"
-	},
-	"devDependencies": {
-		"babel-jest": "21.0.2",
-		"babel-preset-react-native": "4.0.0",
-		"jest": "21.1.0",
-		"react-test-renderer": "16.0.0-alpha.12"
-	},
-	"jest": {
-		"preset": "react-native"
-	}
+  "name": "@yusha/redux-upload-queue",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lyxia/redux-upload-queue.git"
+  },
+  "author": "yusha",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lyxia/redux-upload-queue/issues"
+  },
+  "homepage": "https://github.com/lyxia/redux-upload-queue#readme",
+  "dependencies": {
+    "react": "16.4.1",
+    "react-dom": "^16.2.0",
+    "immutable": "^3.8.1",
+    "react-native": "0.55.4",
+    "react-redux": "^5.0.5",
+    "redux": "^4.0.0",
+    "redux-actions": "^2.2.1",
+    "redux-thunk": "^2.2.0"
+  },
+  "devDependencies": {
+    "babel": "^6.23.0",
+    "babel-jest": "22.4.3",
+    "babel-preset-react-native": "4.0.0",
+    "enzyme": "^3.5.1",
+    "enzyme-adapter-react-16": "^1.3.1",
+    "jest": "22.4.3",
+    "jest-fetch-mock": "^1.6.5",
+    "jsdom-global": "^3.0.2",
+    "react-test-renderer": "16.3.1",
+    "redux-mock-store": "^1.5.3"
+  },
+  "jest": {
+    "preset": "react-native",
+    "setupFiles": [
+      "./config/jest/globalFetch.js",
+      "./config/jest/enzymeConfig.js"
+    ]
+  }
 }
