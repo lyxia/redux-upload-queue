@@ -7,46 +7,11 @@
 - 批量上传过程中失败，重新以失败的地方开始上传
 - 上传进度监听
 
-### 运行示例
-1、git clone https://github.com/lyxia/redux-upload-queue.git
+### install
+`yarn install @yusha/redux-upload-queue`
 
-2、yarn install
-
-3、react-native link
-
-4、AndroidManifest.xml中添加权限
-```
-    <uses-permission android:name="android.permission.CAMERA" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-```
-
-5、在iOS中的info.plist中添加权限
-```
-NSPhotoLibraryUsageDescription, NSCameraUsageDescription
-```
-
-6、修改`redux-upload-queue/js/component/upload/UploadReducer.js`第107行：
-```
-//这个视服务器返回的资源id字段而定
-const {upload, id} = action.payload
-...
-uploadItem = uploadItem.set('state', UPLOAD_STATE.UPLOADED).set('id', id)
-```
-修改`redux-upload-queue/js/networking/FetchData.js`的第16行：
-```
- //视服务器要求的字段而定
-formData.append('imgFile', file)
-formData.append('type', 1)
-```
-修改`redux-upload-queue/js/networking/ServiceConfig.js`文件：
-```
-export const SERVER = "http://172.16.11.80";
-export const UploadURL = '/app/uploadPhoto'
-```
-7、react-native run-ios/run-android
-
-### 运行效果图
-![](https://github.com/lyxia/redux-upload-queue/blob/master/images/page1.png)
+### 使用示例
+https://github.com/lyxia/redux-upload-queue/blob/master/__test__/UploadComponent.test.js
 
 ### 使用方法
 在reducer中注册：
@@ -75,6 +40,9 @@ import {
 //HOC
 Supplement = redux_upload({
     upload: SupplementUploadKey, //上传队列的唯一标识符
+    uploadApi: uploadApi, //上传图片的api，可以async/await，也可以返回Promise，接受filePath, name两个参数
+    isSuccess: isSuccess, //接收的参数为uploadApi的返回值，用来判断在未throw下是否上传成功。
+    getUUIDFuc: getUUIDFuc, //接收的参数为uploadApi的返回值，用来获取上传成功后的资源id。
 })(Supplement)
 
 ```
@@ -199,17 +167,6 @@ UploadLoading = connect(
 ```
 
 ### 使用到的第三方库
-- 用来选取图片或拍照：
-
-"react-native-image-picker"
-
-https://github.com/react-community/react-native-image-picker
-
-- 用来快速集成表单：
-
-"redux-form"
-
-https://github.com/erikras/redux-form
 
 - 用来快速写action：
 
