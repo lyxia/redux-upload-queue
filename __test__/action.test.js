@@ -1,71 +1,52 @@
+import {store} from './UploadConfig'
 import * as UploadActions from '../UploadActions'
-import config, {store} from './UploadConfig'
 
 afterEach(() => {
   store.clearActions()
-  fetch.resetMocks()
 })
 
-it('upload one file success action test', () => {
-  fetch.mockResponseOnce(JSON.stringify({ error: null, id: '123456' }))
-
+it('register upload action' , () => {
   store.dispatch(UploadActions.registerUpload({upload: 'uploadKey'}))
-  store.dispatch(UploadActions.pushUploadItem({upload: 'uploadKey', name: 'fileOne', filePath: 'filePathOne'}))
-  return store.dispatch(UploadActions.upload('uploadKey', config))
-          .then(() => {
-            expect(store.getActions()).toMatchSnapshot()
-          })
+  expect(store.getActions()).toMatchSnapshot()
 })
 
-it('upload one file fail action test', () => {
-  fetch.mockResponseOnce(JSON.stringify({ error: new Error('fail') }))
+it('destroy upload action', () => {
 
-  store.dispatch(UploadActions.registerUpload({upload: 'uploadKey'}))
-  store.dispatch(UploadActions.pushUploadItem({upload: 'uploadKey', name: 'fileOne', filePath: 'filePathOne'}))
-  return store.dispatch(UploadActions.upload('uploadKey', config))
-          .then(() => {
-            expect(store.getActions()).toMatchSnapshot()
-          })
+  store.dispatch(UploadActions.destroyUpload({upload: 'uploadTestKey'}))
+  expect(store.getActions()).toMatchSnapshot()
 })
 
-it('upload mult success action test', () => {
-  fetch.mockResponse(JSON.stringify({ error: null, id: '123456' }))
-
-  store.dispatch(UploadActions.registerUpload({upload: 'uploadKey'}))
-  store.dispatch(UploadActions.pushUploadItem({upload: 'uploadKey', name: 'fileOne', filePath: 'filePathOne'}))
-  store.dispatch(UploadActions.pushUploadItem({upload: 'uploadKey', name: 'fileTwo', filePath: 'filePathTwo'}))
-  store.dispatch(UploadActions.pushUploadItem({upload: 'uploadKey', name: 'fileThree', filePath: 'filePathThree'}))
-  return store.dispatch(UploadActions.upload('uploadKey', config))
-          .then(() => {
-            expect(store.getActions()).toMatchSnapshot()
-          })
+it('push upload item action', () => {
+ store.dispatch(UploadActions.pushUploadItem({upload: 'uploadKey', name: 'fileOne', filePath: 'filePathOne'}))
+  expect(store.getActions()).toMatchSnapshot()
 })
 
-it('upload mult fail and reupload action test', () => {
-  fetch.mockResponses(
-    [
-      JSON.stringify({ error: null, id: '123456' })
-    ],
-    [
-      JSON.stringify({ error: null, id: '123456' })
-    ],
-    [
-      JSON.stringify({ error: new Error('fail') })
-    ],
-    [
-      JSON.stringify({ error: null, id: '123456' })
-    ],
-  )
+it('delete upload item action', () => {
+  store.dispatch(UploadActions.deleteUploadItem({upload: 'uploadTestKey', name: 'fileOne'}))
+  expect(store.getActions()).toMatchSnapshot()
+})
 
-  store.dispatch(UploadActions.registerUpload({upload: 'uploadKey'}))
-  store.dispatch(UploadActions.pushUploadItem({upload: 'uploadKey', name: 'fileOne', filePath: 'filePathOne'}))
-  store.dispatch(UploadActions.pushUploadItem({upload: 'uploadKey', name: 'fileTwo', filePath: 'filePathTwo'}))
-  store.dispatch(UploadActions.pushUploadItem({upload: 'uploadKey', name: 'fileThree', filePath: 'filePathThree'}))
-  return store.dispatch(UploadActions.upload('uploadKey', config))
-          .then(() => {
-            return store.dispatch(UploadActions.upload('uploadKey', config))
-          })
-          .then(() => {
-            expect(store.getActions()).toMatchSnapshot()
-          })
+it('start upload action', () => {
+  store.dispatch(UploadActions.startUpload({upload: 'uploadTestKey'}))
+  expect(store.getActions()).toMatchSnapshot()
+})
+
+it('start upload item action', () => {
+  store.dispatch(UploadActions.startuploadItem({upload: 'uploadTestKey'}))
+  expect(store.getActions()).toMatchSnapshot()
+})
+
+it('upload item success action', () => {
+  store.dispatch(UploadActions.uploadItemSuccess({upload: 'uploadTestKey', id:'123456'}))
+  expect(store.getActions()).toMatchSnapshot()
+})
+
+it('upload item failed action', () => {
+  store.dispatch(UploadActions.uploadItemFailed({upload: 'uploadTestKey'}))
+  expect(store.getActions()).toMatchSnapshot()
+})
+
+it('upload complete action', () => {
+  store.dispatch(UploadActions.uploadComplete({upload: 'uploadTestKey'}))
+  expect(store.getActions()).toMatchSnapshot()
 })

@@ -20,7 +20,7 @@ export const store = mockStore((actions) => {
 export class Foo extends Component {
     render() {
         return (
-            <Text>hello</Text>
+            <Text test-id="foo">hello</Text>
         )
     }
 }

@@ -1,13 +1,30 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`upload mult fail and reupload action test 1`] = `
+exports[`delete upload item action 1`] = `
 Array [
   Object {
     "payload": Object {
-      "upload": "uploadKey",
+      "name": "fileOne",
+      "upload": "uploadTestKey",
     },
-    "type": "Upload/registerUpload",
+    "type": "Upload/deleteItem",
   },
+]
+`;
+
+exports[`destroy upload action 1`] = `
+Array [
+  Object {
+    "payload": Object {
+      "upload": "uploadTestKey",
+    },
+    "type": "Upload/destroyUpload",
+  },
+]
+`;
+
+exports[`push upload item action 1`] = `
+Array [
   Object {
     "payload": Object {
       "filePath": "filePathOne",
@@ -16,269 +33,72 @@ Array [
     },
     "type": "Upload/pushItem",
   },
+]
+`;
+
+exports[`register upload action 1`] = `
+Array [
   Object {
     "payload": Object {
-      "filePath": "filePathTwo",
-      "name": "fileTwo",
       "upload": "uploadKey",
     },
-    "type": "Upload/pushItem",
+    "type": "Upload/registerUpload",
   },
+]
+`;
+
+exports[`start upload action 1`] = `
+Array [
   Object {
     "payload": Object {
-      "filePath": "filePathThree",
-      "name": "fileThree",
-      "upload": "uploadKey",
-    },
-    "type": "Upload/pushItem",
-  },
-  Object {
-    "payload": Object {
-      "upload": "uploadKey",
+      "upload": "uploadTestKey",
     },
     "type": "Upload/startUpload",
   },
+]
+`;
+
+exports[`start upload item action 1`] = `
+Array [
   Object {
     "payload": Object {
-      "upload": "uploadKey",
+      "upload": "uploadTestKey",
     },
     "type": "Upload/startUploadItem",
   },
+]
+`;
+
+exports[`upload complete action 1`] = `
+Array [
   Object {
     "payload": Object {
-      "id": "123456",
-      "upload": "uploadKey",
+      "upload": "uploadTestKey",
     },
-    "type": "Upload/successUploadItem",
+    "type": "Upload/uploadComplete",
   },
+]
+`;
+
+exports[`upload item failed action 1`] = `
+Array [
   Object {
     "payload": Object {
-      "upload": "uploadKey",
-    },
-    "type": "Upload/startUploadItem",
-  },
-  Object {
-    "payload": Object {
-      "id": "123456",
-      "upload": "uploadKey",
-    },
-    "type": "Upload/successUploadItem",
-  },
-  Object {
-    "payload": Object {
-      "upload": "uploadKey",
-    },
-    "type": "Upload/startUploadItem",
-  },
-  Object {
-    "payload": Object {
-      "upload": "uploadKey",
+      "upload": "uploadTestKey",
     },
     "type": "Upload/failedUploadItem",
   },
-  Object {
-    "payload": Object {
-      "upload": "uploadKey",
-    },
-    "type": "Upload/uploadComplete",
-  },
-  Object {
-    "payload": Object {
-      "upload": "uploadKey",
-    },
-    "type": "Upload/startUpload",
-  },
-  Object {
-    "payload": Object {
-      "upload": "uploadKey",
-    },
-    "type": "Upload/startUploadItem",
-  },
-  Object {
-    "payload": Object {
-      "id": "123456",
-      "upload": "uploadKey",
-    },
-    "type": "Upload/successUploadItem",
-  },
-  Object {
-    "payload": Object {
-      "upload": "uploadKey",
-    },
-    "type": "Upload/uploadComplete",
-  },
 ]
 `;
 
-exports[`upload mult success action test 1`] = `
+exports[`upload item success action 1`] = `
 Array [
   Object {
     "payload": Object {
-      "upload": "uploadKey",
-    },
-    "type": "Upload/registerUpload",
-  },
-  Object {
-    "payload": Object {
-      "filePath": "filePathOne",
-      "name": "fileOne",
-      "upload": "uploadKey",
-    },
-    "type": "Upload/pushItem",
-  },
-  Object {
-    "payload": Object {
-      "filePath": "filePathTwo",
-      "name": "fileTwo",
-      "upload": "uploadKey",
-    },
-    "type": "Upload/pushItem",
-  },
-  Object {
-    "payload": Object {
-      "filePath": "filePathThree",
-      "name": "fileThree",
-      "upload": "uploadKey",
-    },
-    "type": "Upload/pushItem",
-  },
-  Object {
-    "payload": Object {
-      "upload": "uploadKey",
-    },
-    "type": "Upload/startUpload",
-  },
-  Object {
-    "payload": Object {
-      "upload": "uploadKey",
-    },
-    "type": "Upload/startUploadItem",
-  },
-  Object {
-    "payload": Object {
       "id": "123456",
-      "upload": "uploadKey",
+      "upload": "uploadTestKey",
     },
     "type": "Upload/successUploadItem",
-  },
-  Object {
-    "payload": Object {
-      "upload": "uploadKey",
-    },
-    "type": "Upload/startUploadItem",
-  },
-  Object {
-    "payload": Object {
-      "id": "123456",
-      "upload": "uploadKey",
-    },
-    "type": "Upload/successUploadItem",
-  },
-  Object {
-    "payload": Object {
-      "upload": "uploadKey",
-    },
-    "type": "Upload/startUploadItem",
-  },
-  Object {
-    "payload": Object {
-      "id": "123456",
-      "upload": "uploadKey",
-    },
-    "type": "Upload/successUploadItem",
-  },
-  Object {
-    "payload": Object {
-      "upload": "uploadKey",
-    },
-    "type": "Upload/uploadComplete",
-  },
-]
-`;
-
-exports[`upload one file fail action test 1`] = `
-Array [
-  Object {
-    "payload": Object {
-      "upload": "uploadKey",
-    },
-    "type": "Upload/registerUpload",
-  },
-  Object {
-    "payload": Object {
-      "filePath": "filePathOne",
-      "name": "fileOne",
-      "upload": "uploadKey",
-    },
-    "type": "Upload/pushItem",
-  },
-  Object {
-    "payload": Object {
-      "upload": "uploadKey",
-    },
-    "type": "Upload/startUpload",
-  },
-  Object {
-    "payload": Object {
-      "upload": "uploadKey",
-    },
-    "type": "Upload/startUploadItem",
-  },
-  Object {
-    "payload": Object {
-      "upload": "uploadKey",
-    },
-    "type": "Upload/failedUploadItem",
-  },
-  Object {
-    "payload": Object {
-      "upload": "uploadKey",
-    },
-    "type": "Upload/uploadComplete",
-  },
-]
-`;
-
-exports[`upload one file success action test 1`] = `
-Array [
-  Object {
-    "payload": Object {
-      "upload": "uploadKey",
-    },
-    "type": "Upload/registerUpload",
-  },
-  Object {
-    "payload": Object {
-      "filePath": "filePathOne",
-      "name": "fileOne",
-      "upload": "uploadKey",
-    },
-    "type": "Upload/pushItem",
-  },
-  Object {
-    "payload": Object {
-      "upload": "uploadKey",
-    },
-    "type": "Upload/startUpload",
-  },
-  Object {
-    "payload": Object {
-      "upload": "uploadKey",
-    },
-    "type": "Upload/startUploadItem",
-  },
-  Object {
-    "payload": Object {
-      "id": "123456",
-      "upload": "uploadKey",
-    },
-    "type": "Upload/successUploadItem",
-  },
-  Object {
-    "payload": Object {
-      "upload": "uploadKey",
-    },
-    "type": "Upload/uploadComplete",
   },
 ]
 `;
