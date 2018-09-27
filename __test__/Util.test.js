@@ -1,37 +1,37 @@
-import config, { store } from './UploadConfig'
-import * as UploadActions from '../UploadActions'
 import * as Util from '../Util'
+import {Upload, UploadItem, UPLOAD_STATE} from '../Data'
+import {Map, List} from 'immutable'
 
 const uploadName = 'uploadKey'
-let state = null
-beforeAll(() => {
-    fetch.mockResponses(
-        [
-            JSON.stringify({ error: null, id: '123456' })
-        ],
-        [
-            JSON.stringify({ error: new Error('fail') })
-        ],
-        [
-            JSON.stringify({ error: null, id: '1234567' })
-        ],
-    )
-
-    store.dispatch(UploadActions.registerUpload({ upload: uploadName }))
-    store.dispatch(UploadActions.pushUploadItem({ upload: uploadName, name: 'fileOne', filePath: 'filePathOne' }))
-    store.dispatch(UploadActions.pushUploadItem({ upload: uploadName, name: 'fileTwo', filePath: 'filePathTwo' }))
-    store.dispatch(UploadActions.pushUploadItem({ upload: uploadName, name: 'fileThree', filePath: 'filePathThree' }))
-    return store.dispatch(UploadActions.upload(uploadName, config))
-        .then(() => {
-            state = store.getState()
-            return expect(state).toMatchSnapshot()
+let state = {
+    upload: Map({
+        'uploadKey': new Upload({
+            name: 'uploadKey',
+            wattingQueue: List([]),
+            uploadedQueue: List([
+                new UploadItem({
+                    name: 'fileThree',
+                    filepath: 'fileThreePath',
+                    state: UPLOAD_STATE.UPLOADED,
+                    id: '123456',
+                }),
+                new UploadItem({
+                    name: 'fileOne',
+                    filepath: 'fileOnePath',
+                    state: UPLOAD_STATE.UPLOADED,
+                    id: '1234567',
+                })
+            ]),
+            failedQueue: List([
+                new UploadItem({
+                    name: 'fileTwo',
+                    filepath: 'fileTwoPath',
+                    state: UPLOAD_STATE.FAILED,
+                }),
+            ]),
         })
-})
-
-afterAll(() => {
-    store.clearActions()
-    fetch.resetMocks()
-})
+    })
+}
 
 test('upload Util getUploadData test', () => {
     expect(Util.getUploadData(state, uploadName)).toMatchSnapshot()

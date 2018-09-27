@@ -1,43 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[` 1`] = `
-Object {
-  "upload": Immutable.Map {
-    "uploadKey": Immutable.Upload {
-      "wattingQueue": Immutable.List [],
-      "uploadedQueue": Immutable.List [
-        Immutable.UploadItem {
-          "filepath": "filePathOne",
-          "state": "uploaded",
-          "id": "123456",
-          "name": "fileOne",
-        },
-        Immutable.UploadItem {
-          "filepath": "filePathThree",
-          "state": "uploaded",
-          "id": "1234567",
-          "name": "fileThree",
-        },
-      ],
-      "failedQueue": Immutable.List [
-        Immutable.UploadItem {
-          "filepath": "filePathTwo",
-          "state": "failed",
-          "id": null,
-          "name": "fileTwo",
-        },
-      ],
-      "uploading": false,
-      "cancle": false,
-      "name": "uploadKey",
-    },
-  },
-}
-`;
-
 exports[`upload Util getFailedCount test 1`] = `1`;
 
-exports[`upload Util getUpdateItemID test 1`] = `"123456"`;
+exports[`upload Util getUpdateItemID test 1`] = `"1234567"`;
 
 exports[`upload Util getUpdatedIDs test 1`] = `
 Array [
@@ -51,21 +16,21 @@ Immutable.Upload {
   "wattingQueue": Immutable.List [],
   "uploadedQueue": Immutable.List [
     Immutable.UploadItem {
-      "filepath": "filePathOne",
+      "filepath": "fileThreePath",
       "state": "uploaded",
       "id": "123456",
-      "name": "fileOne",
+      "name": "fileThree",
     },
     Immutable.UploadItem {
-      "filepath": "filePathThree",
+      "filepath": "fileOnePath",
       "state": "uploaded",
       "id": "1234567",
-      "name": "fileThree",
+      "name": "fileOne",
     },
   ],
   "failedQueue": Immutable.List [
     Immutable.UploadItem {
-      "filepath": "filePathTwo",
+      "filepath": "fileTwoPath",
       "state": "failed",
       "id": null,
       "name": "fileTwo",

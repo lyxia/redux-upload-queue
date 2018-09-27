@@ -3,7 +3,7 @@ import uploadComponent from '../UploadComponent'
 
 import React from 'react'
 import { Provider } from 'react-redux'
-import { mount } from 'enzyme';
+import { shallow, mount } from 'enzyme';    
 
 afterEach(() => {
     store.clearActions()
@@ -14,12 +14,10 @@ test('uploadComponent new', () => {
     fetch.mockResponseOnce(JSON.stringify({ error: null, id: '123456' }))
     
     const Component = uploadComponent({ upload: 'uploadKey', config: config })(Foo)
-    const componentWrap = mount(
-        <Provider store={store}>
-            <Component />
-        </Provider>
+    const componentWrap = shallow(
+        <Component store={store}/>
     )
-    const fooWrap = componentWrap.find(Foo)
+    const fooWrap = componentWrap.shallow()
     const fooProps = fooWrap.props()
     fooProps.pushUploadItem('fileOnePath', 'fileOne')
     return fooProps.startUpload().then(() => {
@@ -36,12 +34,10 @@ test('uploadComponent old', () => {
         getUUIDFuc: config.getUUIDFuc,
         isSuccess: config.isSuccess,
     })(Foo)
-    const componentWrap = mount(
-        <Provider store={store}>
-            <Component />
-        </Provider>
+    const componentWrap = shallow(
+        <Component store={store}/>
     )
-    const fooWrap = componentWrap.find(Foo)
+    const fooWrap = componentWrap.shallow()
     const fooProps = fooWrap.props()
     fooProps.pushUploadItem('fileOnePath', 'fileOne')
     return fooProps.startUpload().then(() => {
